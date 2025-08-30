@@ -1,0 +1,148 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+  margin: 0;
+}
+
+h2 {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Button 1 */
+.btn1 {
+  background: #ff6f61;
+}
+.btn1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+.btn1:hover::after {
+  left: 150%;
+}
+
+/* Button 2 */
+.btn2 {
+  background: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+}
+.btn2:hover {
+  background: #00ffcc;
+  color: #222;
+}
+
+/* Button 3 */
+.btn3 {
+  background: transparent;
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+}
+.btn3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ffcc00;
+  z-index: -1;
+  transition: 0.4s;
+}
+.btn3:hover::before {
+  left: 0;
+}
+.btn3:hover {
+  color: #222;
+}
+
+/* Button 4 */
+.btn4 {
+  background: #007bff;
+  box-shadow: 0 0 0px #007bff;
+}
+.btn4:hover {
+  box-shadow: 0 0 20px #007bff, 0 0 40px #007bff;
+}
+
+/* Button 5 */
+.btn5 {
+  background: #e91e63;
+  transform: rotate(0deg);
+}
+.btn5:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Button 6 */
+.btn6 {
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  background-size: 200% 200%;
+  transition: background-position 0.5s;
+}
+.btn6:hover {
+  background-position: right center;
+}
+
+/* Button 7 */
+.btn7 {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+.btn7::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  background: #ffffff;
+  transition: width 0.4s;
+}
+.btn7:hover::after {
+  width: 100%;
+}
+
+/* Button 8 */
+.btn8 {
+  background: #4caf50;
+  box-shadow: 0 5px 0 #388e3c;
+}
+.btn8:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
